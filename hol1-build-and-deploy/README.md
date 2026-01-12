@@ -17,16 +17,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 Once you've stable Rust installed on your machine, you must install the `wasm32-wasip1` target for Rust:
 
-<details>
-<summary>Add `wasm32-wasip1` target</summary>
-
-To add the `wasm32-wasip1` target, run the following command:
-
 ```bash
 rustup target add wasm32-wasip1
 ```
-
-</details>
 
 ### TypeScript Language Guide
 
