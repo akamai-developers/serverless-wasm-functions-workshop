@@ -9,7 +9,7 @@ If you want to explore Spin using a different programming language, consult the 
 
 ### Rust Language Guide
 
-Install [Rust](https://rustlang.org) on your machine. Although there are plenty ways for installing Rust, we recommend using Rustup. Rustup is the Rust installer and version management tool.
+Install [Rust](https://rustlang.org) on your machine. Although there are plenty ways for installing Rust, we recommend using Rustup. Rustup is the Rust installer and version management tool:
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -17,9 +17,16 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 Once you've stable Rust installed on your machine, you must install the `wasm32-wasip1` target for Rust:
 
+<details>
+<summary>Add `wasm32-wasip1` target</summary>
+
+To add the `wasm32-wasip1` target, run the following command:
+
 ```bash
 rustup target add wasm32-wasip1
 ```
+
+</details>
 
 ### TypeScript Language Guide
 
