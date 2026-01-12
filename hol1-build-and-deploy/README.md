@@ -1,4 +1,4 @@
-# HOL Instructions | Build & Deploy in Four Steps
+# HOL 1: Build & Deploy in Four Steps
 
 First, we want to ensure your development machine is good to go. Although Spin (the developer tool for building WebAssembly applications) supports multiple languages, we'll only provide instructions for Rust and TypeScript as part of this workshop.
 
