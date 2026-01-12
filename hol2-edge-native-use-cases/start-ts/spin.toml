@@ -1,0 +1,32 @@
+spin_manifest_version = 2
+
+[application]
+authors = ["Akamai Developers <thans@akamai.com>"]
+description = ""
+name = "hol2-edgenative-usecases"
+version = "0.1.0"
+
+[variables]
+# See https://spinframework.dev/v3/variables#adding-variables-to-your-applications
+
+[[trigger.http]]
+route = "/..."
+component = "hol2-edgenative-usecases"
+
+[component.hol2-edgenative-usecases]
+source = "dist/hol2-edgenative-usecases.wasm"
+exclude_files = ["**/node_modules"]
+# Outbound HTTP requests
+# See https://spinframework.dev/v3/http-outbound#granting-http-permissions-to-components
+allowed_outbound_hosts = []
+
+# Key Value Stores 
+# See https://spinframework.dev/v3/kv-store-api-guide#granting-key-value-store-permissions-to-components
+key_value_stores = []
+
+[component.hol2-edgenative-usecases.build]
+command = ["npm install", "npm run build"]
+watch = ["src/**/*.ts"]
+
+[component.hol2-edgenative-usecases.variables]
+# See https://spinframework.dev/v3/variables#adding-variables-to-your-applications
