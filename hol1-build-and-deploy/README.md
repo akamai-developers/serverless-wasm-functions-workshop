@@ -39,6 +39,14 @@ Finished building all Spin components
 
 ```bash
 spin up
+```
+
+<details>
+<summary>Expected Output</summary>
+
+The `spin up` command should generate an output similar to this:
+
+```bash
 Logging component stdio to ".spin/logs/"
 Preparing Wasm modules is taking a few seconds...
 
@@ -48,11 +56,20 @@ Available Routes:
   hello-serverless-functions: http://127.0.0.1:3000 (wildcard)
 ```
 
+</details>
+
 From within a new terminal instance, send an HTTP `GET` request to the root route of your application running at `localhost:3000`:
 
 ```bash
 curl -i localhost:3000/
+```
 
+<details>
+<summary>Expected Output</summary>
+
+The `curl -i localhost:3000/` command should generate an output similar to this:
+
+```bash
 HTTP/1.1 200 OK
 content-type: text/plain; charset=UTF-8
 server: Spin CLI
@@ -61,6 +78,8 @@ date: Fri, 09 Jan 2026 15:12:24 GMT
 
 Hello, Spin!
 ```
+
+</details>
 
 ### Step 4: Deploy the application to Serverless Wasm Functions using `spin aka deploy`
 
@@ -96,6 +115,14 @@ When deploying for the first time, `spin aka deploy` command asks about the desi
 
 ```bash
 spin aka deploy --no-confirm --create-name hello-serverless-functions
+```
+
+<details>
+<summary>Expected Output</summary>
+
+The `spin aka deploy --no-confirm --create-name hello-serverless-functions` command should generate an output similar to this:
+
+```bash
 Workspace linked to app hello-serverless-functions
 Waiting for app to be ready... ready
 
@@ -103,11 +130,20 @@ App Routes:
 - hello-serverless-functions: https://10663d58-fea4-437f-a323-6e493caff337.fwf.app (wildcard)
 ```
 
+</details>
+
 Once the command has finished, you can sent another HTTP `GET` request. However, this time we'll sent it to the endpoint generated for your application on top of Serverless Wasm Functions:
 
 ```bash
 curl -i https://10663d58-fea4-437f-a323-6e493caff337.fwf.app
+```
 
+<details>
+<summary>Expected Output</summary>
+
+The `curl -i https://10663d58-fea4-437f-a323-6e493caff337.fwf.app` command should generate an output similar to this:
+
+```bash
 HTTP/1.1 200 OK
 Content-Type: text/plain; charset=UTF-8
 Server: envoy
@@ -121,3 +157,5 @@ Akamai-GRN: 0.c528d2bc.1767972362.1debe697
 
 Hello, Spin!
 ```
+
+</details>
