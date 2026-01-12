@@ -1,8 +1,10 @@
 # HOL 1: Build & Deploy in Four Steps
 
-## Clone this repository
+## Cloning The Repository and Setting Up The Developer Machine
 
-If you have not yet cloned this repository [https://github.com/akamai-developers/serverless-wasm-functions-workshop](https://github.com/akamai-developers/serverless-wasm-functions-workshop), please do it now and navigate to the repository folder.
+Clone this repository ([https://github.com/akamai-developers/serverless-wasm-functions-workshop](https://github.com/akamai-developers/serverless-wasm-functions-workshop)) and navigate to your local copy using the terminal.
+
+Ensure you've configured your developer machine as explained in the [Setup Instructions](/developer-machine-setup/).
 
 ## Build & Deploy in Four Steps
 
