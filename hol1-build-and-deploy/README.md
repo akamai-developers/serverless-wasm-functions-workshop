@@ -1,4 +1,4 @@
-# HOL Instructions | Build & Deploy in Three Steps
+# HOL Instructions | Build & Deploy in Four Steps
 
 First, we want to ensure your development machine is good to go. Although Spin (the developer tool for building WebAssembly applications) supports multiple languages, we'll only provide instructions for Rust and TypeScript as part of this workshop.
 
@@ -66,13 +66,17 @@ TBD
 
 🎉That's all you need to start you WebAssembly journey 🎉
 
+## Clone this repository
+
+If you have not yet cloned this repository [https://github.com/akamai-developers/serverless-wasm-functions-workshop](https://github.com/akamai-developers/serverless-wasm-functions-workshop), please do it now and navigate to the repository folder.
+
 ## Build & Deploy in Four Steps
 
 Having installed all necessary things on your development machine, it's time to get started with Spin, learn the Spin workflow and build your first application. 
 
 ### Step 1: Create your first Spin application using `spin new`
 
-Navigate to the [`hol1-build-and-deploy` folder](./) and create your first Spin application using `spin new`. The `spin new` command will present a list of installed templates. As we'll build a simple HTTP based function, select either `http-rust` or `http-ts` depending on your preferred programming language. 
+Navigate to the `hol1-build-and-deploy` folder and create your first Spin application using `spin new`. The `spin new` command will present a list of installed templates. As we'll build a simple HTTP based function, select either `http-rust` or `http-ts` depending on your preferred programming language. 
 
 The wizard asks for fundamental metadata like `name`, `description`, `HTTP Path` and (in case of TypeScript) for your preferred HTTP router. Use the values shown in the following table:
 
