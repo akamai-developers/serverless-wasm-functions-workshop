@@ -50,16 +50,70 @@ Spin has more to offer, you can create and distribute your own templates, write 
 
 Let's put hype and enthusiasm aside and install `spin` on your machine now.
 
-#### Installing Spin CLI on macOS
+<details>
+<summary>Installing Spin CLI on macOS</summary>
 
-TBD
+#### Homebrew (macOS)
 
-#### Installing Spin CLI on Linux
+You can manage your Spin installation via Homebrew. Homebrew automatically installs Spin templates and Spin plugins, and on uninstall, will prompt you to delete the directory where the templates and plugins were downloaded:
 
-TBD
+Install the Spin Framework tap, which Homebrew tracks, updates, and installs Spin from:
 
-#### Installing Spin CLI on Windows
+```bash
+brew tap spinframework/tap
+```
 
-TBD
+Install Spin:
 
+```bash
+brew install spinframework/tap/spin
+```
+
+#### Installer script (macOS)
+
+Another option (other than `brew`) is to use the Spin installer script. The installer script installs Spin along with a starter set of language templates and plugins:
+
+```bash
+curl -fsSL https://spinframework.dev/downloads/install.sh | bash
+```
+
+Once you have run the installer script, it is highly recommended to add Spin to a folder, which is on your path, e.g.:
+
+```bash
+sudo mv spin /usr/local/bin/
+```
+</details>
+
+<details>
+<summary>Installing Spin CLI on Linux</summary>
+
+#### Installer script (Linux)
+
+The installer script installs Spin along with a starter set of language templates and plugins:
+
+```bash
+curl -fsSL https://spinframework.dev/downloads/install.sh | bash
+```
+
+Once you have run the installer script, it is highly recommended to add Spin to a folder, which is on your path, e.g.:
+
+```bash
+sudo mv spin /usr/local/bin/
+```
+</details>
+
+<details>
+<summary>Installing Spin CLI on Windows</summary>
+
+#### Downloading the Binary (Windows) 
+
+If using Windows (PowerShell / `cmd.exe`), you can download the [Windows binary release of Spin](https://github.com/spinframework/spin/releases/latest).
+
+Simply unzip the binary release and place the `spin.exe` in your system path.
+
+This does not install any Spin templates or plugins. For a starter list, see the [Installing Templates and Plugins section of the Spin documentation](https://spinframework.dev/v3/install#installing-templates-and-plugins).
+
+If you want to use WSL2 (Windows Subsystem for Linux 2), please follow the [instructions for using Linux](#installer-script-linux).
+
+</details>
 🎉That's all you need to start you WebAssembly journey 🎉

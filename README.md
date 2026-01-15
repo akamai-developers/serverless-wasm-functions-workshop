@@ -16,11 +16,13 @@ Attendees should have
 
 1. Start with the [Introduction](./introduction/) to explain core values and benefits from using WebAssembly to build and run serverless workloads. The slide deck provides an high-level introduction to technical underpinnings and introduces [Spin](https://spinframework.dev) and *Serverless Wasm Functions* to the audience.
 
-2. HOL 1: [Build & Deploy in 4 Steps](./hol1-build-and-deploy/) is an interactive exercise to help developers familiarizing themselves with developer tooling (`spin` CLI) for building and running their first application. As part of this HOL, attendees will also create their account with *Serverless Wasm Functions* and deploy their workload.
+2. Attendees [setup their development machines](./developer-machine-setup/) by following the language- and os-specific instructions.
+   
+3. HOL 1: [Build & Deploy in 4 Steps](./hol1-build-and-deploy/) is an interactive exercise to help developers familiarizing themselves with developer tooling (`spin` CLI) for building and running their first application. As part of this HOL, attendees will also create their account with *Serverless Wasm Functions* and deploy their workload.
 
-3. HOL 2: [Edge-Native Use Cases](./hol2-edge-native-use-cases/) is another interactive exercise which teaches fundamental building blocks of Spin and *Serverless Wasm Functions*. Developers will make use of language-specific Spin SDKs to address common day-to-day concerns when building edge-native applications.
+4. HOL 2: [Edge-Native Use Cases](./hol2-edge-native-use-cases/) is another interactive exercise which teaches fundamental building blocks of Spin and *Serverless Wasm Functions*. Developers will make use of language-specific Spin SDKs to address common day-to-day concerns when building edge-native applications.
 
-4. HOL 3: [Generative AI at the Edge](./hol3-genai-at-the-edge/) is the final exercise illustrating how developers can build smart applications for the edge by adding generative AI to the mix
+5. HOL 3: [Generative AI at the Edge](./hol3-genai-at-the-edge/) is the final exercise illustrating how developers can build smart applications for the edge by adding generative AI to the mix
 
 
 ## HOL folder structure and checkpoints
@@ -55,6 +57,6 @@ To delete applications deployed to your account as part of this workshop, run th
 
 ```bash
 spin aka apps delete --app-name hello-serverless-functions --no-confirm
-spin aka apps delete --app-name edge-native-use-cases --no-confirm
+spin aka apps delete --app-name hol2-edgenative-usecases --no-confirm
 spin aka apps delete --app-name genai-at-the-edge --no-confirm
 ```
