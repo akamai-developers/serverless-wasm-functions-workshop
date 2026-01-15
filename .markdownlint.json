@@ -1,0 +1,10 @@
+{
+    "MD024": { "siblings_only": true} ,
+    "MD013": { 
+        "enabled": false
+    },
+    "MD033": { "allowed_elements": ["details", "summary"]},
+    "MD060": {
+        "style": "compact"
+    }
+}

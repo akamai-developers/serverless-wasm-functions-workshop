@@ -8,20 +8,20 @@ Ensure you've configured your developer machine as explained in the [Setup Instr
 
 ## Build & Deploy in Four Steps
 
-Having installed all necessary things on your development machine, it's time to get started with Spin, learn the Spin workflow and build your first application. 
+Having installed all necessary things on your development machine, it's time to get started with Spin, learn the Spin workflow and build your first application.
 
 ### Step 1: Create your first Spin application using `spin new`
 
-Navigate to the `hol1-build-and-deploy` folder and create your first Spin application using `spin new`. The `spin new` command will present a list of installed templates. As we'll build a simple HTTP based function, select either `http-rust` or `http-ts` depending on your preferred programming language. 
+Navigate to the `hol1-build-and-deploy` folder and create your first Spin application using `spin new`. The `spin new` command will present a list of installed templates. As we'll build a simple HTTP based function, select either `http-rust` or `http-ts` depending on your preferred programming language.
 
 The wizard asks for fundamental metadata like `name`, `description`, `HTTP Path` and (in case of TypeScript) for your preferred HTTP router. Use the values shown in the following table:
 
 | Metadata Field | Condition | Value to Provide | Description |
-|----------------|-----------|------------------|-------------|
-| Name           |           | `hello-serverless-functions` | Name of your Spin application |
-| Description    |           | `` | just confirm with `RETURN` |
-| HTTP Path      |           | `/...` | just confirm with `RETURN` |
-| HTTP Router    | TS/JS only | `hono` | You can also choose `itty` or `none` but our solution is built with `hono` |
+| -------------- | --------- | ---------------- | ----------- |
+| Name | | `hello-serverless-functions` | Name of your Spin application |
+| Description | | `` | just confirm with `RETURN` |
+| HTTP Path | | `/...` | just confirm with `RETURN` |
+| HTTP Router | TS/JS only | `hono` | You can also choose `itty` or `none` but our solution is built with `hono` |
 
 > Spin commands are tweaked for productivity and are provide all sorts of flags to fully automate them when executed in an unattended environment. That said, you could also use the `spin new -t http-rust -a hello-serverless-functions` (or respectively `spin new -t http-ts --value http-router=hono -a hello-serverless-functions`) command for creating the application with the same configuration
 
@@ -111,7 +111,7 @@ Note: If you would instead like to deploy to an existing app, cancel this deploy
 OK to continue? [Y/n] # confirm with RETURN
 ```
 
-When deploying for the first time, `spin aka deploy` command asks about the desired name and for confirmation to actually deploy. Again, there are flags to deploy without the CLI asking those questions: `spin aka deploy --create-name hello-serverless-functions --no-confirm `.
+When deploying for the first time, `spin aka deploy` command asks about the desired name and for confirmation to actually deploy. Again, there are flags to deploy without the CLI asking those questions: `spin aka deploy --create-name hello-serverless-functions --no-confirm`.
 
 **Deploying an application to Serverless Wasm Functions** takes roughly 50 seconds in which your application is uploaded to Serverless Wasm Functions, its deployed throughout all service regions across the globe and a random endpoint is generated for your workload. 🚀
 

@@ -1,11 +1,10 @@
-# Developer Machine Setup 
+# Developer Machine Setup
 
 First, we want to ensure your development machine is good to go. Although Spin (the developer tool for building WebAssembly applications) supports multiple languages, we'll only provide instructions for Rust and TypeScript as part of this workshop.
 
 If you want to explore Spin using a different programming language, consult the official Spin documentation at [https://spinframework.dev](https://spinframework.dev). It contains language guides for [Go](https://spinframework.dev/v3/go-components) and [Python](https://spinframework.dev/v3/python-components) as well.
 
-
-### Rust Language Guide
+## Rust Language Guide
 
 Install [Rust](https://rustlang.org) on your machine. Although there are plenty ways for installing Rust, we recommend using Rustup. Rustup is the Rust installer and version management tool:
 
@@ -18,11 +17,12 @@ Once you've stable Rust installed on your machine, you must install the `wasm32-
 ```bash
 rustup target add wasm32-wasip1
 ```
+
 ---
 
-### TypeScript Language Guide
+## TypeScript Language Guide
 
-For building Spin application in TypeScript (or plain JavaScript) you must have Node.JS installed on your system. We recommend using latest LTS (Krypton `24.12.0` at the time of writing this document). 
+For building Spin application in TypeScript (or plain JavaScript) you must have Node.JS installed on your system. We recommend using latest LTS (Krypton `24.12.0` at the time of writing this document).
 
 There are plenty ways of installing and managing Node.JS version. We highly recommend using a version manager such as [`nvm`](https://github.com/nvm-sh/nvm) for example. By using a node version manager, you are able to switch Node.JS versions on the fly:
 
@@ -38,9 +38,9 @@ If you don't want to use `nvm`, you can find and install Node.JS at [nodejs.org]
 
 ---
 
-### Install Spin CLI
+## Installing Spin CLI
 
-Spin provides a language agnostic CLI addressing all inner-loop concerns in an elegant and highly-productive fashion. No matter if you're using Rust, TypeScript or any other supported language, you need only a handful of simple commands for creating, compiling, running, and deploying your applications. 
+Spin provides a language agnostic CLI addressing all inner-loop concerns in an elegant and highly-productive fashion. No matter if you're using Rust, TypeScript or any other supported language, you need only a handful of simple commands for creating, compiling, running, and deploying your applications.
 
 That's what we call the **Spin Workflow**:
 
@@ -53,11 +53,11 @@ Spin has more to offer, you can create and distribute your own templates, write 
 
 Let's put hype and enthusiasm aside and install `spin` on your machine now.
 
-#### Installing Spin CLI on macOS
+### Installing Spin CLI on macOS
 
 To install Spin CLI on macOS, you can either use Homebrew or the Spin installer script:
 
-##### Homebrew
+#### Homebrew
 
 You can manage your Spin installation via Homebrew. Homebrew automatically installs Spin templates and Spin plugins, and on uninstall, will prompt you to delete the directory where the templates and plugins were downloaded:
 
@@ -73,7 +73,7 @@ Install Spin:
 brew install spinframework/tap/spin
 ```
 
-##### Installer script (macOS)
+#### Installer script (macOS)
 
 Another option (other than `brew`) is to use the Spin installer script. The installer script installs Spin along with a starter set of language templates and plugins:
 
@@ -86,11 +86,8 @@ Once you have run the installer script, it is highly recommended to add Spin to 
 ```bash
 sudo mv spin /usr/local/bin/
 ```
-</details>
 
-#### Installing Spin CLI on Linux
-
-##### Installer script (Linux)
+### Installing Spin CLI on Linux
 
 The installer script installs Spin along with a starter set of language templates and plugins:
 
@@ -104,7 +101,7 @@ Once you have run the installer script, it is highly recommended to add Spin to 
 sudo mv spin /usr/local/bin/
 ```
 
-#### Installing Spin CLI on Windows
+### Installing Spin CLI on Windows
 
 If using Windows (PowerShell / `cmd.exe`), you can download the [Windows binary release of Spin](https://github.com/spinframework/spin/releases/latest).
 
@@ -112,9 +109,9 @@ Simply unzip the binary release and place the `spin.exe` in your system path.
 
 This does not install any Spin templates or plugins. For a starter list, see the [Installing Templates and Plugins section of the Spin documentation](https://spinframework.dev/v3/install#installing-templates-and-plugins).
 
-If you want to use WSL2 (Windows Subsystem for Linux 2), please follow the [instructions for using Linux](#installer-script-linux).
+If you want to use WSL2 (Windows Subsystem for Linux 2), please follow the [instructions for using Linux](#installing-spin-cli-on-linux).
 
---- 
+---
 
 🎉 That's all you need to start you WebAssembly journey 🎉
 

@@ -19,7 +19,7 @@ Edge native applications come in many different shapes and address a vast variet
 
 You can find *starting points* for [TypeScript in `start-ts`](./start-ts/) and for [Rust in `start-rs`](./start-rust/). It's a Spin application that exposes an HTTP API at `/api/`. The component responding to incoming requests at `/api/...` and has a few simple handlers registered using either the built-in HTTP router (in case of Rust) or the [Hono](https://hono.dev/) router in case of TypeScript.
 
-Without further ado, you can compile and run the *starting point* using the `spin build ` and `spin up` commands (or you combine both commands by executing `spin up --build`).
+Without further ado, you can compile and run the *starting point* using the `spin build` and `spin up` commands (or you combine both commands by executing `spin up --build`).
 
 ## Task 1: Implement HTTP-Routing in Spin applications
 
@@ -32,13 +32,13 @@ Spin applications have full access to the incoming HTTP request, allowing you to
 
 ### Test and Deploy the Spin application
 
-You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments. 
+You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
 
 > **Hint:** Explore the implementation and the application manifest of the *starting point*, you'll find inline comments providing additional context and link to the Spin documentation for further explanation.
 
 ## Task 2: Building multi-component Spin applications
 
-A Spin application could consist of multiple WebAssembly components. As we focus on applications triggered by inbound HTTP requests, each component is linked to a particular path (or path prefix, e.g. `/api/...`). You can use the `spin add` command for adding additional components to an existing Spin application. 
+A Spin application could consist of multiple WebAssembly components. As we focus on applications triggered by inbound HTTP requests, each component is linked to a particular path (or path prefix, e.g. `/api/...`). You can use the `spin add` command for adding additional components to an existing Spin application.
 
 Extend the Spin application by adding a new component responsible for serving static content at `/frontend/...`. To do so, complete the following tasks:
 
@@ -49,7 +49,7 @@ Extend the Spin application by adding a new component responsible for serving st
 
 ### Test and Deploy the Spin application
 
-You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments. 
+You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
 
 ## Task 2: Using Application Variables
 
@@ -57,11 +57,11 @@ You can test your Spin application at any time (assuming that your code is synta
 
 ### Test and Deploy the Spin application
 
-You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments. 
+You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
 
 ## Task 3: Persisting Data
 
-*Serverless Wasm Functions* provides access to a fully-managed key value store, allowing you to persist data across multiple function invocations. The fully-managed key value store is globally distributed and isolated per application. 
+*Serverless Wasm Functions* provides access to a fully-managed key value store, allowing you to persist data across multiple function invocations. The fully-managed key value store is globally distributed and isolated per application.
 
 To interact with the *Serverless Wasm Functions* key value store, you have to:
 
@@ -71,8 +71,7 @@ To interact with the *Serverless Wasm Functions* key value store, you have to:
 The *starting point* contains a function that handles incoming `GET` requests at `/api/ping`. Extend the handler to count its invocations using the key value store.
 
 > **Hint:** Explore the implementation and the application manifest of the *starting point*, you'll find inline comments providing additional context and link to the Spin documentation for further explanation.
->
 
 ### Test and Deploy the Spin application
 
-You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments. 
+You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
