@@ -10,11 +10,11 @@ version = "0.1.0"
 # See https://spinframework.dev/v3/variables#adding-variables-to-your-applications
 
 [[trigger.http]]
-route = "/..."
-component = "edge-native-use-cases"
+route = "/api/..."
+component = "api"
 
-[component.edge-native-use-cases]
-source = "dist/edge-native-use-cases.wasm"
+[component.api]
+source = "api/dist/api.wasm"
 exclude_files = ["**/node_modules"]
 # Outbound HTTP requests
 # See https://spinframework.dev/v3/http-outbound#granting-http-permissions-to-components
@@ -24,9 +24,9 @@ allowed_outbound_hosts = []
 # See https://spinframework.dev/v3/kv-store-api-guide#granting-key-value-store-permissions-to-components
 key_value_stores = []
 
-[component.edge-native-use-cases.build]
-command = ["npm install", "npm run build"]
-watch = ["src/**/*.ts"]
+[component.api.build]
+command = "npm install && npm run build"
+workdir = "api"
 
-[component.edge-native-use-cases.variables]
+[component.api.variables]
 # See https://spinframework.dev/v3/variables#adding-variables-to-your-applications

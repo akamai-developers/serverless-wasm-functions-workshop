@@ -1,5 +1,3 @@
-#:schema https://schemas.spinframework.dev/spin/manifest-v2/latest.json
-
 spin_manifest_version = 2
 
 [application]
@@ -12,22 +10,22 @@ description = ""
 # See https://spinframework.dev/v3/variables#adding-variables-to-your-applications
 
 [[trigger.http]]
-route = "/..."
-component = "edge-native-use-cases"
+route = "/api/..."
+component = "api"
 
-[component.edge-native-use-cases]
-source = "target/wasm32-wasip1/releaseedge_native_use_cases.wasm"
+[component.api]
+source = "api/target/wasm32-wasip1/release/api.wasm"
 # Outbound HTTP requests
 # See https://spinframework.dev/v3/http-outbound#granting-http-permissions-to-components
 allowed_outbound_hosts = []
-
 # Key Value Stores 
 # See https://spinframework.dev/v3/kv-store-api-guide#granting-key-value-store-permissions-to-components
 key_value_stores = []
 
-[component.edge-native-use-cases.build]
+[component.api.build]
 command = "cargo build --target wasm32-wasip1 --release"
+workdir = "api"
 watch = ["src/**/*.rs", "Cargo.toml"]
 
-[component.edge-native-use-cases.variables]
+[component.api.variables]
 # See https://spinframework.dev/v3/variables#adding-variables-to-your-applications

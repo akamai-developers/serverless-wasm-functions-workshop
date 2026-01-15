@@ -11,7 +11,7 @@ app.use(logger());
 // HOL 2.1: Add another handler and respond to incoming POST requests at /add
 //          See the `add` function at the end of this file
 
-app.get('/greet/:name', (c: Context) => {
+app.get('/api/greet/:name', (c: Context) => {
    // HOL 2.2: Instead of hard-coding "Hello", load hello from an variable
     // Hint: Variables must be defined in Spin Manifest
     //       Variables are defined on the scope of the application
@@ -23,7 +23,7 @@ app.get('/greet/:name', (c: Context) => {
   return c.text(`Hello, ${c.req.param('name')}!`);
 });
 
-app.get('/ping', (c: Context) => {
+app.get('/api/ping', (c: Context) => {
    // HOL 2.3: Use Key-Value store to track how many invocations hit this endpoint
     //          Sent a custom X-Count header along the actual value of the invocation counter
     // Hint: Spin provides an API for you to persist data in a key value store managed by Spin. 

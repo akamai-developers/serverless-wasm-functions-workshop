@@ -1,5 +1,5 @@
 [package]
-name = "edge-native-use-cases"
+name = "api"
 authors = ["Thorsten Hans <thorsten.hans@fermyon.com>"]
 description = ""
 version = "0.1.0"
@@ -11,8 +11,8 @@ crate-type = ["cdylib"]
 
 [dependencies]
 anyhow = "1"
+spin-sdk = "5.0.0"
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = "1.0.149"
-spin-sdk = "5.0.0"
 
 [workspace]

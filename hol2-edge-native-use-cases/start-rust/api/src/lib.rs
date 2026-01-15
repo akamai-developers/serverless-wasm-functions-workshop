@@ -7,9 +7,9 @@ use spin_sdk::http_component;
 #[http_component]
 fn entrypoint(req: Request) -> anyhow::Result<impl IntoResponse> {
     let mut router = Router::default();
-    router.get("/greet/:name", greet);
-    router.get("/ping", ping);
-    // HOL 2.1: Add another handler and respond to incoming POST requests at /add
+    router.get("/api/greet/:name", greet);
+    router.get("/api/ping", ping);
+    // HOL 2.1: Add another handler and respond to incoming POST requests at /api/add
     Ok(router.handle(req))
 }
 
