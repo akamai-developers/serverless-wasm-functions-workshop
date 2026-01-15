@@ -50,10 +50,11 @@ Spin has more to offer, you can create and distribute your own templates, write 
 
 Let's put hype and enthusiasm aside and install `spin` on your machine now.
 
-<details>
-<summary>Installing Spin CLI on macOS</summary>
+#### Installing Spin CLI on macOS
 
-#### Homebrew (macOS)
+To install Spin CLI on macOS, you can either use Homebrew or the Spin installer script:
+
+##### Homebrew
 
 You can manage your Spin installation via Homebrew. Homebrew automatically installs Spin templates and Spin plugins, and on uninstall, will prompt you to delete the directory where the templates and plugins were downloaded:
 
@@ -69,7 +70,7 @@ Install Spin:
 brew install spinframework/tap/spin
 ```
 
-#### Installer script (macOS)
+##### Installer script (macOS)
 
 Another option (other than `brew`) is to use the Spin installer script. The installer script installs Spin along with a starter set of language templates and plugins:
 
@@ -84,10 +85,9 @@ sudo mv spin /usr/local/bin/
 ```
 </details>
 
-<details>
-<summary>Installing Spin CLI on Linux</summary>
+#### Installing Spin CLI on Linux
 
-#### Installer script (Linux)
+##### Installer script (Linux)
 
 The installer script installs Spin along with a starter set of language templates and plugins:
 
@@ -100,12 +100,8 @@ Once you have run the installer script, it is highly recommended to add Spin to 
 ```bash
 sudo mv spin /usr/local/bin/
 ```
-</details>
 
-<details>
-<summary>Installing Spin CLI on Windows</summary>
-
-#### Downloading the Binary (Windows) 
+#### Installing Spin CLI on Windows
 
 If using Windows (PowerShell / `cmd.exe`), you can download the [Windows binary release of Spin](https://github.com/spinframework/spin/releases/latest).
 
@@ -115,5 +111,6 @@ This does not install any Spin templates or plugins. For a starter list, see the
 
 If you want to use WSL2 (Windows Subsystem for Linux 2), please follow the [instructions for using Linux](#installer-script-linux).
 
-</details>
+--- 
+
 🎉That's all you need to start you WebAssembly journey 🎉
