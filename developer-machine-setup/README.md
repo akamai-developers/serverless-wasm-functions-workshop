@@ -18,6 +18,7 @@ Once you've stable Rust installed on your machine, you must install the `wasm32-
 ```bash
 rustup target add wasm32-wasip1
 ```
+---
 
 ### TypeScript Language Guide
 
@@ -34,6 +35,8 @@ nvm use 24
 ```
 
 If you don't want to use `nvm`, you can find and install Node.JS at [nodejs.org](https://nodejs.org/en).
+
+---
 
 ### Install Spin CLI
 
