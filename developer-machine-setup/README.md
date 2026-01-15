@@ -116,4 +116,6 @@ If you want to use WSL2 (Windows Subsystem for Linux 2), please follow the [inst
 
 --- 
 
-🎉That's all you need to start you WebAssembly journey 🎉
+🎉 That's all you need to start you WebAssembly journey 🎉
+
+[Go back to the workshop instructions](/README.md#suggested-running-order)
