@@ -5,11 +5,23 @@ import { fire } from 'hono/service-worker';
 import type { Context, Next } from 'hono';
 import { logger } from 'hono/logger';
 
+const decoder = new TextDecoder();
 let app = new Hono();
 
 app.use(logger());
-// HOL 2.1: Add another handler and respond to incoming POST requests at /add
-//          See the `add` function at the end of this file
+
+// HOL 2.1: Add another handler and respond to incoming POST requests at /api/add
+//          The route registration on `app` must happen after the `add` function
+//          The add handler should grab values from the request payload
+//          The corresponding struct `Payload` is located at the end of this file
+//          For valid requests, add both numbers and return the sum as response
+const add = async (c: Context) => {
+  // Hint: use await c.req.json() to access request payload
+  //       see https://hono.dev/docs/api/request#json
+  throw new HTTPException(500, { message: "Not Implemented"})
+};
+
+
 
 app.get('/api/greet/:name', (c: Context) => {
    // HOL 2.2: Instead of hard-coding "Hello", load hello from an variable
@@ -25,7 +37,7 @@ app.get('/api/greet/:name', (c: Context) => {
 
 app.get('/api/ping', (c: Context) => {
    // HOL 2.3: Use Key-Value store to track how many invocations hit this endpoint
-    //          Sent a custom X-Count header along the actual value of the invocation counter
+    //          Sent a custom x-counter header along the actual value of the invocation counter
     // Hint: Spin provides an API for you to persist data in a key value store managed by Spin. 
     //       This key value store allows Spin developers to persist non-relational data 
     //       across application invocations.
@@ -36,14 +48,10 @@ app.get('/api/ping', (c: Context) => {
   return c.text('pong')
 });
 
-// HOL 2.1: The add handler should grab values from the request payload
-//          The corresponding struct `Payload` is located at the end of this file
-//          For valid requests, add both numbers and return the sum as response
-const add = async (c: Context) => {
-  // Hint: use await c.req.json() to access request payload
-  //       see https://hono.dev/docs/api/request#json
-  throw new HTTPException(500, { message: "Not Implemented"})
-};
+interface Payload {
+  operandA: number;
+  operandB: number;
+}
 
 fire(app);
 

@@ -12,7 +12,7 @@ Edge native applications come in many different shapes and address a vast variet
 
 1. Implement HTTP-Routing in Spin applications
 2. Building multi-component Spin applications
-3. Specify and utilize application variables to configure Spin applications
+3. Specify and use application variables to configure Spin applications
 4. Persisting data across multiple invocations using the distributed key-value store
 
 ## Starting Points
@@ -26,7 +26,7 @@ Without further ado, you can compile and run the *starting point* using the `spi
 Spin applications have full access to the incoming HTTP request, allowing you to build real-world HTTP-based functions. Building serverless HTTP-APIs and running them on the edge is pretty common and accelerates frequent user interactions. Complete the following tasks to familiarize yourself with the routing capabilities within the bounds of a Spin application:
 
 - Use the router API to handle incoming `POST` requests at `/api/add`, the *starting point* already contains a corresponding handler function (`add`) which you could wire up to the route registration.
-- Take the incoming request payload and turn it into an instance of the `Payload` structure (or class) which exists already in the *starting point*
+- Take the incoming request payload and turn it into an instance of the `Payload` structure (or interface in the case of TypeScript) which exists already in the *starting point*
 - Respond to requests with invalid or mal-formatted payloads with a HTTP `400` (`Bad Request`)
 - Calculate the sum of both operands and return it as JSON (`Content-Type: application/json`)
 
@@ -45,13 +45,17 @@ Extend the Spin application by adding a new component responsible for serving st
 - Add a new component called `frontend` to the Spin application using the `static-fileserver` template and set the `HTTP Path` to `/frontend/...` and the asset directory to `frontend`
 - Examine the changes applied to the application manifest `spin.toml` you can see another `[[trigger.http]]` being added along the `[comonent.frontend]` block
 - Add an `index.html` to the `frontend` sub-folder and provide (or vibe-code) some simple HTML
-- Explore additional configuration variables for the `static-fileserver` component to tailor the runtime behavior
+- Explore [additional configuration variables](https://github.com/spinframework/spin-fileserver?tab=readme-ov-file#configuration-options) for the `static-fileserver` component to tailor the runtime behavior
 
 ### Test and Deploy the Spin application
 
 You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
 
-## Task 2: Using Application Variables
+## Task 2: Specify and Use Application Variables
+
+TBD!
+
+Application variables could be specified using the `--variable` flag when running your application locally with `spin up` or when deploying to *Serverless Wasm Functions* using `spin aka deploy`.
 
 > **Hint:** Explore the implementation and the application manifest of the *starting point*, you'll find inline comments providing additional context and link to the Spin documentation for further explanation.
 
@@ -66,6 +70,7 @@ You can test your Spin application at any time (assuming that your code is synta
 To interact with the *Serverless Wasm Functions* key value store, you have to:
 
 - Specify which components require access to the key value store in the application manifest (`spin.toml`)
+  - *Serverless Wasm Functions* currently supports only the `default` key value store
 - Use the language-specific Spin SDK for interacting with the key value store
 
 The *starting point* contains a function that handles incoming `GET` requests at `/api/ping`. Extend the handler to count its invocations using the key value store.

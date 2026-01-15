@@ -3,7 +3,6 @@ use serde::Deserialize;
 use spin_sdk::http::{IntoResponse, Params, Request, Response, ResponseBuilder, Router};
 use spin_sdk::http_component;
 
-
 #[http_component]
 fn entrypoint(req: Request) -> anyhow::Result<impl IntoResponse> {
     let mut router = Router::default();
@@ -22,6 +21,8 @@ fn entrypoint(req: Request) -> anyhow::Result<impl IntoResponse> {
 fn _add(_req: Request, _params: Params) -> Result<impl IntoResponse> {
     // Hint: Use generic serde_json::from_slice with Payload to deserialize the req.body()
     //       If from_slice returns an Err, send a 400 bad request
+    //       If you decide to create a dedicated struct for the response,
+    //       consider implementing the IntoBody trait from the spin_sdk::http::conversions module
     Ok(Response::new(500, "Not Implemented"))
 }
 
@@ -37,15 +38,15 @@ fn greet(_req: Request, params: Params) -> Result<impl IntoResponse> {
     //       https://spinframework.dev/v3/variables#application-variables
     // Hint: The spin_sdk crate comes with batteries included
     //       Check spin_sdk::variables
-    let greeting = format!("Hello, {name}!");
+    let message = format!("Hello, {name}!");
     Ok(ResponseBuilder::new(200)
         .header("content-type", "text/plain")
-        .body(greeting).build())
+        .body(message).build())
 }
 
 fn ping(_req: Request, _params: Params) -> Result<impl IntoResponse> {
     // HOL 2.3: Use Key-Value store to track how many invocations hit this endpoint
-    //          Sent a custom X-Count header along the actual value of the invocation counter
+    //          Sent a custom x-counter header along the actual value of the invocation counter
     // Hint: Spin provides an API for you to persist data in a key value store managed by Spin. 
     //       This key value store allows Spin developers to persist non-relational data 
     //       across application invocations.
