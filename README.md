@@ -51,12 +51,12 @@ HOL 3 (GenAI at the Edge) requires a Linode (with dedicated GPU) being provision
 
 ## Cleaning up your Serverless Wasm Functions Account
 
-As part of this workshop, you'll deploy XXX applications to your individual *Serverless Wasm Functions* account. To retrieve a list of applications deployed to your account, can always use the `spin aka apps list` command.
+As part of this workshop, you'll deploy several applications to your individual *Serverless Wasm Functions* account. To retrieve a list of applications deployed to your account, can always use the `spin aka apps list` command.
 
 To delete applications deployed to your account as part of this workshop, run the following commands:
 
 ```bash
 spin aka apps delete --app-name hello-serverless-functions --no-confirm
-spin aka apps delete --app-name hol2-edgenative-usecases --no-confirm
+spin aka apps delete --app-name edge-native-use-cases --no-confirm
 spin aka apps delete --app-name genai-at-the-edge --no-confirm
 ```
