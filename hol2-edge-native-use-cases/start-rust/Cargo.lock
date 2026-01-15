@@ -319,7 +319,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "hol2-edgenative-usecases"
+name = "edge-native-use-cases"
 version = "0.1.0"
 dependencies = [
  "anyhow",

@@ -3,7 +3,7 @@
 spin_manifest_version = 2
 
 [application]
-name = "hol2-edgenative-usecases"
+name = "edge-native-use-cases"
 version = "0.1.0"
 authors = ["Akamai Developers <thans@akamai.com>"]
 description = ""
@@ -13,10 +13,10 @@ description = ""
 
 [[trigger.http]]
 route = "/..."
-component = "hol2-edgenative-usecases"
+component = "edge-native-use-cases"
 
-[component.hol2-edgenative-usecases]
-source = "target/wasm32-wasip1/release/hol2_edgenative_usecases.wasm"
+[component.edge-native-use-cases]
+source = "target/wasm32-wasip1/releaseedge_native_use_cases.wasm"
 # Outbound HTTP requests
 # See https://spinframework.dev/v3/http-outbound#granting-http-permissions-to-components
 allowed_outbound_hosts = []
@@ -25,9 +25,9 @@ allowed_outbound_hosts = []
 # See https://spinframework.dev/v3/kv-store-api-guide#granting-key-value-store-permissions-to-components
 key_value_stores = []
 
-[component.hol2-edgenative-usecases.build]
+[component.edge-native-use-cases.build]
 command = "cargo build --target wasm32-wasip1 --release"
 watch = ["src/**/*.rs", "Cargo.toml"]
 
-[component.hol2-edgenative-usecases.variables]
+[component.edge-native-use-cases.variables]
 # See https://spinframework.dev/v3/variables#adding-variables-to-your-applications

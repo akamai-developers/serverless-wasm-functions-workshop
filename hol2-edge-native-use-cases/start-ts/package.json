@@ -1,11 +1,11 @@
 {
-  "name": "hol2-edgenative-usecases",
+  "name": "edge-native-use-cases",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node build.mjs && mkdirp dist && j2w -i build/bundle.js --initLocation http://hol2-edgenative-usecases.localhost -o dist/hol2-edgenative-usecases.wasm",
-    "build:debug": "node build.mjs && mkdirp dist && j2w -d -i build/bundle.js --initLocation http://hol2-edgenative-usecases.localhost -o dist/hol2-edgenative-usecases.wasm",
+    "build": "node build.mjs && mkdirp dist && j2w -i build/bundle.js --initLocation http://edge-native-use-cases.localhost -o dist/edge-native-use-cases.wasm",
+    "build:debug": "node build.mjs && mkdirp dist && j2w -d -i build/bundle.js --initLocation http://edge-native-use-cases.localhost -o dist/edge-native-use-cases.wasm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
