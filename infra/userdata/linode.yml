@@ -1,0 +1,30 @@
+#Cloud-config
+packages:
+  - gcc
+  - curl
+  - wget
+
+write_files:
+  - path: /etc/environment
+    content: |
+      OLLAMA_MODELS="/var/lib/ollama/models"
+    append: true
+  - path: /etc/systemd/system/ollama.service.d/override.conf
+    owner: root:root
+    permissions: '0644'
+    content: |
+      [Service]
+      Environment="OLLAMA_HOST=0.0.0.0:11434"
+      Environment="OLLAMA_KEEP_ALIVE=-1"
+
+runcmd:
+  - wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb -O /tmp/cuda-keyring.deb
+  - dpkg -i /tmp/cuda-keyring.deb
+  - apt-get update
+  - apt-get -y install cuda-toolkit-13-1 cuda-drivers
+  - /root/install.sh
+  - export OLLAMA_MODELS=/var/lib/ollama/models
+  - curl -fsSL https://ollama.com/install.sh | sh
+  - systemctl daemon-reload
+  - systemctl enable ollama.service
+  - reboot

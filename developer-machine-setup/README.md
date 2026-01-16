@@ -111,6 +111,20 @@ This does not install any Spin templates or plugins. For a starter list, see the
 
 If you want to use WSL2 (Windows Subsystem for Linux 2), please follow the [instructions for using Linux](#installing-spin-cli-on-linux).
 
+## Installing the `aka` plugin for Spin CLI
+
+As part of this workshop, you'll deploy several Spin applications to *Serverless Wasm Functions*. As a developer, you'll mainly interact with *Serverless Wasm Functions* through the CLI interface provided by the `aka` plugin for Spin CLI.
+
+You can find and install the `aka` plugin (along many other useful plugins for Spin CLI) using the sub-commands of `spin plugins`. 
+
+To install the `aka` plugin, execute the following command:
+
+```bash
+spin plugins install aka --yes
+```
+
+You can verify the installation of the `aka` plugin by simply executing `spin aka --version`, (which should print `0.6.0` or higher).
+
 ---
 
 🎉 That's all you need to start you WebAssembly journey 🎉
