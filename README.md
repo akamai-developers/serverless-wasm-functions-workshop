@@ -11,7 +11,7 @@ Workshop participants should bring:
 - Permissions to install software
 - Permission to allocate a local port (by default `3000`) for running and testing applications
 
-> If you're not participating an instructor-led version of this workshop, access to Akamai Cloud is required for provisioning a Linde including a dedicated GPU to run large language models (see HOL 3)
+> If you're not participating an instructor-led version of this workshop, access to Akamai Cloud is required for provisioning a Linode including a dedicated GPU to run large language models (see HOL 3)
 
 ## Suggested Running Order
 
