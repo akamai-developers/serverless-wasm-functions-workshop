@@ -44,7 +44,7 @@ Workshop participants could use the corresponding "checkpoint" (`solution-rust` 
 
 ## Supportive Cloud Infrastructure
 
-Hands-On-Labs 3 (GenAI at the Edge) requires a Linode (with dedicated GPU) being provisioned and at lest one large language model (LLM) being exposed through [Ollama](https://ollama.com/). For instructor-led workshops, workshop participants could expect this infrastructure being pre-provisioned and ready-to-use. (HTTP endpoints will be provided by the workshop instructor)
+Hands-On-Labs 3 (GenAI at the Edge) requires a Linode (with dedicated GPU) being provisioned and at least one large language model (LLM) being exposed through [Ollama](https://ollama.com/). For instructor-led workshops, workshop participants could expect this infrastructure being pre-provisioned and ready-to-use. (HTTP endpoints will be provided by the workshop instructor)
 
 > The Cloud infrastructure setup instructions could be found in the [`infra`](./infra/) folder.
 
