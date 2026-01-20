@@ -1,4 +1,4 @@
-# HOL 1: Build & Deploy in Four Steps
+# Hands-On-Labs 1: Build & Deploy in Four Steps
 
 ## Cloning The Repository and Setting Up The Developer Machine
 

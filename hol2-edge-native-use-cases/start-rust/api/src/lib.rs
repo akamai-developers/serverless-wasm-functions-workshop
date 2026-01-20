@@ -8,14 +8,15 @@ fn entrypoint(req: Request) -> anyhow::Result<impl IntoResponse> {
     let mut router = Router::default();
     router.get("/api/greet/:name", greet);
     router.get("/api/ping", ping);
-    // HOL 2.1: Add another handler and respond to incoming POST requests at /api/add
+    // Hands-On-Labs 2 Edge Native Use Cases
+    // TASK 1: Add another handler and respond to incoming POST requests at /api/add
     Ok(router.handle(req))
 }
 
-// HOL 2.1: The add handler should grab values from the request payload
-//          The corresponding struct `Payload` is located at the end of this file
-//          The popular crates serde and serde_json are already configured as dependency
-//          For valid requests, add both numbers and return the sum as Response
+// TASK 1: The add handler should grab values from the request payload
+//         The corresponding struct `Payload` is located at the end of this file
+//         The popular crates serde and serde_json are already configured as dependency
+//         For valid requests, add both numbers and return the sum as Response
 // Hint: The method name starts with an _ (underscore) to ensure Rust compiler does not yell at you
 //       Once you've hooked up the method using the Router, remove the leading underscore
 fn _add(_req: Request, _params: Params) -> Result<impl IntoResponse> {
@@ -31,7 +32,7 @@ fn greet(_req: Request, params: Params) -> Result<impl IntoResponse> {
         return Ok(Response::new(400, "Bad Request"));
     };
 
-    // HOL 2.2: Instead of hard-coding "Hello", load hello from an variable
+    // TASK 2: Instead of hard-coding "Hello", load hello from an variable
     // Hint: Variables must be defined in Spin Manifest
     //       Variables are defined on the scope of the application
     //       Individual components must be granted access to variables
@@ -45,7 +46,7 @@ fn greet(_req: Request, params: Params) -> Result<impl IntoResponse> {
 }
 
 fn ping(_req: Request, _params: Params) -> Result<impl IntoResponse> {
-    // HOL 2.3: Use Key-Value store to track how many invocations hit this endpoint
+    // TASK3: Use Key-Value store to track how many invocations hit this endpoint
     //          Sent a custom x-counter header along the actual value of the invocation counter
     // Hint: Spin provides an API for you to persist data in a key value store managed by Spin. 
     //       This key value store allows Spin developers to persist non-relational data 

@@ -40,25 +40,6 @@ async fn perform_sentiment_analysis(req: Request, _p: Params) -> Result<impl Int
             println!("Cache miss for: '{}'", sanitized);
         }
     }
-    // Hands-On-Labs 3 - Edge Accelerated Generative AI
-    // TASK 1: Implement Sentiment Analysis using Ollama API
-    //          use RequestBuilder and Outbound HTTP provided by Spin SDK
-    //          to perform a sentiment analysis. 
-    //          Grab the response and deserialize it into OllamaGenerateResponseModel
-    //          In case of any error, return a 500 
-    //          Desired Ollama API endpoint: /api/generate API
-    //          Request Payload can be constructed using OllamaGenerateRequestModel
-    //          Ollama Docs: https://docs.ollama.com/api/generate
-    //          Spin SDK Docs: https://spinframework.dev/v3/http-outbound
-    // TASK 2: Accelerate Sentiment Analysis using Distributed Key Value Store
-    //          Sanitize the input text by removing spaces, punctuation, and converting to lowercase
-    //          Use the md5 crate to compute a hash of the sanitized input text
-    //          Use Spin SDK Key Value Store to check if a cached response exists for the computed hash
-    //          If a cached response exists, return it directly
-    //          If no cached response exists, proceed to call the Ollama API
-    //          After receiving a successful response from the Ollama API, cache the response
-    //          in the Key Value Store using the computed hash as the key
-
 
     let ollama_endpoint = format!("{}/api/chat", _config.ollama_api_url);
     let ollama_request_payload = ChatRequest::new(
@@ -92,7 +73,7 @@ async fn perform_sentiment_analysis(req: Request, _p: Params) -> Result<impl Int
     if store.set_json(hash, &payload).is_err() {
         println!("Error caching response");
     }
-    // grab sentiment from the response
+
     Ok(ResponseBuilder::new(200)
         .header("Content-Type", "application/json")
         .body(payload)

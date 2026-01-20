@@ -1,4 +1,3 @@
-// For Hono documentation refer to https://hono.dev/docs/
 import { Hono } from 'hono';
 import { HTTPException } from 'hono/http-exception'
 import { fire } from 'hono/service-worker';
@@ -10,7 +9,8 @@ let app = new Hono();
 
 app.use(logger());
 
-// HOL 2.1: Add another handler and respond to incoming POST requests at /api/add
+// Hands-On-Labs 2 Edge Native Use Cases
+// TASK 1:  Add another handler and respond to incoming POST requests at /api/add
 //          The route registration on `app` must happen after the `add` function
 //          The add handler should grab values from the request payload
 //          The corresponding struct `Payload` is located at the end of this file
@@ -24,7 +24,8 @@ const add = async (c: Context) => {
 
 
 app.get('/api/greet/:name', (c: Context) => {
-   // HOL 2.2: Instead of hard-coding "Hello", load hello from an variable
+    // Hands-On-Labs 2 Edge Native Use Cases
+    // TASK 2: Instead of hard-coding "Hello", load hello from an variable
     // Hint: Variables must be defined in Spin Manifest
     //       Variables are defined on the scope of the application
     //       Individual components must be granted access to variables
@@ -36,7 +37,8 @@ app.get('/api/greet/:name', (c: Context) => {
 });
 
 app.get('/api/ping', (c: Context) => {
-   // HOL 2.3: Use Key-Value store to track how many invocations hit this endpoint
+    // Hands-On-Labs 2 Edge Native Use Cases
+    // TASK 3: Use Key-Value store to track how many invocations hit this endpoint
     //          Sent a custom x-counter header along the actual value of the invocation counter
     // Hint: Spin provides an API for you to persist data in a key value store managed by Spin. 
     //       This key value store allows Spin developers to persist non-relational data 

@@ -10,9 +10,6 @@ let app = new Hono();
 const decoder = new TextDecoder();
 
 app.use(logger());
-// HOL 2.1: The add handler should grab values from the request payload
-//          The corresponding struct `Payload` is located at the end of this file
-//          For valid requests, add both numbers and return the sum as response
 const add = async (c: Context) => {
   let payload: Payload;
   try {

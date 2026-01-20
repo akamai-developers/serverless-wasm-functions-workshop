@@ -1,4 +1,4 @@
-# HOL 3: Edge Accelerated Generative AI
+# Hands-On-Labs 3: Edge Accelerated Generative AI
 
 ## Cloning The Repository and Setting Up The Developer Machine
 

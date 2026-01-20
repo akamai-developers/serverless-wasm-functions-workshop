@@ -11,7 +11,7 @@ Workshop participants should bring:
 - Permissions to install software
 - Permission to allocate a local port (by default `3000`) for running and testing applications
 
-> If you're not participating an instructor-led version of this workshop, access to Akamai Cloud is required for provisioning a Linode including a dedicated GPU to run large language models (see HOL 3)
+> If you're not participating an instructor-led version of this workshop, access to Akamai Cloud is required for provisioning a Linode including a dedicated GPU to run large language models (see Hands-On-Labs 3)
 
 ## Suggested Running Order
 
@@ -19,17 +19,17 @@ Workshop participants should bring:
 
 2. Workshop participants [setup their development machines](./developer-machine-setup/) by following the language- and os-specific instructions.
 
-3. HOL 1: [Build & Deploy in 4 Steps](./hol1-build-and-deploy/) is an interactive exercise to familiarize yourself with the developer tooling (`spin` CLI) for building and running WebAssembly applications. As part of this HOL, you will also create your account with *Serverless Wasm Functions* and deploy the first application.
+3. Hands-On-Labs 1: [Build & Deploy in 4 Steps](./hol1-build-and-deploy/) is an interactive exercise to familiarize yourself with the developer tooling (`spin` CLI) for building and running WebAssembly applications. As part of this Hands-On-Labs, you will also create your account with *Serverless Wasm Functions* and deploy the first application.
 
-4. HOL 2: [Edge-Native Use Cases](./hol2-edge-native-use-cases/) is another interactive exercise which teaches fundamental building blocks of Spin and *Serverless Wasm Functions*. You will make use of language-specific Spin SDKs to address common day-to-day concerns when building edge-native applications.
+4. Hands-On-Labs 2: [Edge-Native Use Cases](./hol2-edge-native-use-cases/) is another interactive exercise which teaches fundamental building blocks of Spin and *Serverless Wasm Functions*. You will make use of language-specific Spin SDKs to address common day-to-day concerns when building edge-native applications.
 
-5. HOL 3: [Edge Accelerated Generative AI](./hol3-edge-accelerated-genai/) is the final exercise illustrating how you can build smarter applications for the edge by adding generative AI to the mix.
+5. Hands-On-Labs 3: [Edge Accelerated Generative AI](./hol3-edge-accelerated-genai/) is the final exercise illustrating how you can build smarter applications for the edge by adding generative AI to the mix.
 
-## HOL folder structure and checkpoints
+## Hands-On-Labs folder structure and checkpoints
 
 Although Spin supports many different languages, samples are currently provided in [Rust](https://rustlang.org) and [TypeScript](https://www.typescriptlang.org/) only.
 
-With HOL 1, attendees get a chance to start from scratch and learn the "Spin Workflow". Other HOL folders always follow this structure:
+With Hands-On-Labs 1, attendees get a chance to start from scratch and learn the "Spin Workflow". Other Hands-On-Labs folders always follow this structure:
 
 ```console
 hol-folder/
@@ -40,11 +40,11 @@ hol-folder/
  | - solution-ts/
 ```
 
-Workshop participants could use the corresponding "checkpoint" (`solution-rust` or `solution-ts`) if they have problems with completing a particular HOL. Consider these solution folders as "checkpoints" allowing you (workshop participant) to have the flexibility of extending HOLs individually or diving straight into more advanced topics.
+Workshop participants could use the corresponding "checkpoint" (`solution-rust` or `solution-ts`) if they have problems with completing a particular Hands-On-Labs. Consider these solution folders as "checkpoints" allowing you (workshop participant) to have the flexibility of extending Hands-On-Labs individually or diving straight into more advanced topics.
 
 ## Supportive Cloud Infrastructure
 
-HOL 3 (GenAI at the Edge) requires a Linode (with dedicated GPU) being provisioned and at lest one large language model (LLM) being exposed through [Ollama](https://ollama.com/). For instructor-led workshops, workshop participants could expect this infrastructure being pre-provisioned and ready-to-use. (HTTP endpoints will be provided by the workshop instructor)
+Hands-On-Labs 3 (GenAI at the Edge) requires a Linode (with dedicated GPU) being provisioned and at lest one large language model (LLM) being exposed through [Ollama](https://ollama.com/). For instructor-led workshops, workshop participants could expect this infrastructure being pre-provisioned and ready-to-use. (HTTP endpoints will be provided by the workshop instructor)
 
 > The Cloud infrastructure setup instructions could be found in the [`infra`](./infra/) folder.
 
