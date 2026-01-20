@@ -23,7 +23,7 @@ Workshop participants should bring:
 
 4. HOL 2: [Edge-Native Use Cases](./hol2-edge-native-use-cases/) is another interactive exercise which teaches fundamental building blocks of Spin and *Serverless Wasm Functions*. You will make use of language-specific Spin SDKs to address common day-to-day concerns when building edge-native applications.
 
-5. HOL 3: [Generative AI at the Edge](./hol3-genai-at-the-edge/) is the final exercise illustrating how you can build smarter applications for the edge by adding generative AI to the mix.
+5. HOL 3: [Edge Accelerated Generative AI](./hol3-edge-accelerated-genai/) is the final exercise illustrating how you can build smarter applications for the edge by adding generative AI to the mix.
 
 ## HOL folder structure and checkpoints
 
@@ -57,5 +57,5 @@ To delete applications deployed to your account, run the following commands:
 ```bash
 spin aka apps delete --app-name hello-serverless-functions --no-confirm
 spin aka apps delete --app-name edge-native-use-cases --no-confirm
-spin aka apps delete --app-name genai-at-the-edge --no-confirm
+spin aka apps delete --app-name edge-accelerated-genai --no-confirm
 ```

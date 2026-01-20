@@ -14,6 +14,8 @@ You must provide an access token for Linode. Create a new access token with `rea
 - Linode
 - Firewall
 
+Aso, `Read` is required for `Events`.
+
 Set the access token as environment variable:
 
 ```bash

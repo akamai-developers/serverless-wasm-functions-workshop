@@ -14,19 +14,10 @@ resource "linode_instance" "llm" {
   metadata {
     user_data = base64encode(file("./userdata/linode.yml"))
   }
-}
 
-data "http" "pull_qwen3" {
-  depends_on = [linode_instance.llm]
-  url        = "http://${tolist(linode_instance.llm.ipv4)[0]}:11434/api/pull"
-  method     = "POST"
-  request_headers = {
-    "content-type" = "application/json"
+  provisioner "local-exec" {
+    command = "curl --retry 15 --retry-delay 30 --retry-connrefused -H 'Content-Type: application/json' -d '{\"model\": \"llama3.2:1b\"}' http://${tolist(self.ipv4)[0]}:11434/api/pull"
   }
-  # Optional request body
-  request_body = jsonencode({
-    model = "qwen3"
-  })
 }
 
 resource "linode_firewall" "lb-fw" {
@@ -51,7 +42,4 @@ resource "linode_firewall" "lb-fw" {
     ports    = "11434"
     ipv4     = ["0.0.0.0/0"]
   }
-
-
-
 }
