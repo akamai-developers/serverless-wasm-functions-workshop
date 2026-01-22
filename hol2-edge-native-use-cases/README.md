@@ -8,7 +8,7 @@ Ensure you've configured your developer machine as explained in the [Setup Instr
 
 ## Edge Native Use Cases
 
-Edge native applications come in many different shapes and address a vast variety of requirements. That said, we come of with three common scenarios that you'll tackle as part of this hands-on-labs exercise:
+Edge native applications come in many different shapes and address a vast variety of requirements. That said, we come of with four common scenarios that you'll tackle as part of this hands-on-labs exercise:
 
 1. Implement HTTP-Routing in Spin applications
 2. Specify and use application variables to configure Spin applications
