@@ -30,9 +30,9 @@ async fn perform_sentiment_analysis(req: Request, _p: Params) -> Result<impl Int
     //          to perform a sentiment analysis. 
     //          Grab the response and deserialize it into OllamaGenerateResponseModel
     //          In case of any error, return a 500 
-    //          Desired Ollama API endpoint: /api/generate API
+    //          Desired Ollama API endpoint: /api/chat API
     //          Request Payload can be constructed using OllamaGenerateRequestModel
-    //          Ollama Docs: https://docs.ollama.com/api/generate
+    //          Ollama Docs: https://docs.ollama.com/api/chat
     //          Spin SDK Docs: https://spinframework.dev/v3/http-outbound
     // TASK 2: Accelerate Sentiment Analysis using Distributed Key Value Store
     //          Sanitize the input text by removing spaces, punctuation, and converting to lowercase

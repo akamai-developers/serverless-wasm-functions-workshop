@@ -1,0 +1,31 @@
+spin_manifest_version = 2
+
+[application]
+authors = ["Thorsten Hans <thorsten.hans@fermyon.com>"]
+description = ""
+name = "edge-accelerated-genai"
+version = "0.1.0"
+
+[variables]
+ollama_api_url = { default = "http://127.0.0.1:11434" }
+model = { default = "llama3.2:1b" }
+temperature = { default = "0.2" }
+
+[[trigger.http]]
+route = "/..."
+component = "edge-accelerated-genai"
+
+[component.edge-accelerated-genai]
+source = "dist/edge-accelerated-genai.wasm"
+exclude_files = ["**/node_modules"]
+allowed_outbound_hosts = ["{{ ollama_api_url }}"]
+key_value_stores = ["default"]
+
+[component.edge-accelerated-genai.variables]
+ollama_api_url = "{{ ollama_api_url }}"
+model = "{{ model }}"
+temperature = "{{ temperature }}"
+
+[component.edge-accelerated-genai.build]
+command = ["npm install", "npm run build"]
+watch = ["src/**/*.ts"]
