@@ -5,7 +5,7 @@ spin_manifest_version = 2
 [application]
 name = "edge-accelerated-genai"
 version = "0.1.0"
-authors = ["Thorsten Hans <thorsten.hans@fermyon.com>"]
+authors = ["Thorsten Hans <thans@akamai.com>"]
 description = ""
 
 [variables]

@@ -6,7 +6,7 @@ If you want to explore Spin using a different programming language, consult the 
 
 ## Rust Language Guide
 
-Install [Rust](https://rustlang.org) on your machine. Although there are plenty ways for installing Rust, we recommend using Rustup. Rustup is the Rust installer and version management tool:
+Install [Rust](https://rustlang.org) on your machine. Although there are plenty ways for installing Rust, we recommend using `rustup`. `rustup` is the Rust installer and version management tool:
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -22,19 +22,19 @@ rustup target add wasm32-wasip1
 
 ## TypeScript Language Guide
 
-For building Spin application in TypeScript (or plain JavaScript) you must have Node.JS installed on your system. We recommend using latest LTS (Krypton `24.12.0` at the time of writing this document).
+For building Spin application in TypeScript (or plain JavaScript) you must have [Node.js](https://nodejs.org/en) installed on your system. We recommend using latest LTS (Krypton `24.12.0` at the time of writing this document).
 
-There are plenty ways of installing and managing Node.JS version. We highly recommend using a version manager such as [`nvm`](https://github.com/nvm-sh/nvm) for example. By using a node version manager, you are able to switch Node.JS versions on the fly:
+There are plenty ways of installing and managing Node.js version. We highly recommend using a version manager such as [`nvm`](https://github.com/nvm-sh/nvm) for example. By using a Node.js version manager, you are able to switch Node.js versions on the fly:
 
 ```bash
-# download and install Node.JS 24 (latest LTS)
+# download and install Node.js 24 (latest LTS)
 nvm install 24
 
-# set Node.JS 24 as current node version
+# set Node.js 24 as current node version
 nvm use 24
 ```
 
-If you don't want to use `nvm`, you can find and install Node.JS at [nodejs.org](https://nodejs.org/en).
+If you don't want to use `nvm`, you can find and install Node.js at [nodejs.org](https://nodejs.org/en).
 
 ---
 
