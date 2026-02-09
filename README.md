@@ -1,12 +1,12 @@
-# Serverless Wasm Functions Workshop
+# Akamai Functions Workshop
 
-This repository contains resources for a half-day workshop focussing on *Serverless Wasm Functions*. In addition to a high-level introduction, the workshop consists of three Hands-On-Labs (HOL) exercises. We highly encourage workshop participants to code along and get a sense of how streamlined a developer experience (DX) for building truly serverless edge-native applications feels like in 2026.
+This repository contains resources for a half-day workshop focussing on *Akamai Functions*. In addition to a high-level introduction, the workshop consists of three Hands-On-Labs (HOL) exercises. We highly encourage workshop participants to code along and get a sense of how streamlined a developer experience (DX) for building truly serverless edge-native applications feels like in 2026.
 
 ## Prerequisites
 
 Workshop participants should bring:
 
-- A GitHub account (The GitHub account is used to authenticate against *Serverless Wasm Functions*)
+- A GitHub account (The GitHub account is used to authenticate against *Akamai Functions*)
 - An editor or IDE
 - Permissions to install software
 - Permission to allocate a local port (by default `3000`) for running and testing applications
@@ -15,13 +15,13 @@ Workshop participants should bring:
 
 ## Suggested Running Order
 
-1. Start with the [Introduction](./introduction/) to explain core values and benefits from using WebAssembly to build and run serverless workloads. The presentation provides an high-level introduction to technical underpinnings, introduces [Spin](https://spinframework.dev) and *Serverless Wasm Functions*.
+1. Start with the [Introduction](./introduction/) to explain core values and benefits from using WebAssembly to build and run serverless workloads. The presentation provides an high-level introduction to technical underpinnings, introduces [Spin](https://spinframework.dev) and *Akamai Functions*.
 
 2. Workshop participants [setup their development machines](./developer-machine-setup/) by following the language- and os-specific instructions.
 
-3. Hands-On-Labs 1: [Build & Deploy in 4 Steps](./hol1-build-and-deploy/) is an interactive exercise to familiarize yourself with the developer tooling (`spin` CLI) for building and running WebAssembly applications. As part of this Hands-On-Labs, you will also create your account with *Serverless Wasm Functions* and deploy the first application.
+3. Hands-On-Labs 1: [Build & Deploy in 4 Steps](./hol1-build-and-deploy/) is an interactive exercise to familiarize yourself with the developer tooling (`spin` CLI) for building and running WebAssembly applications. As part of this Hands-On-Labs, you will also create your account with *Akamai Functions* and deploy the first application.
 
-4. Hands-On-Labs 2: [Edge-Native Use Cases](./hol2-edge-native-use-cases/) is another interactive exercise which teaches fundamental building blocks of Spin and *Serverless Wasm Functions*. You will make use of language-specific Spin SDKs to address common day-to-day concerns when building edge-native applications.
+4. Hands-On-Labs 2: [Edge-Native Use Cases](./hol2-edge-native-use-cases/) is another interactive exercise which teaches fundamental building blocks of Spin and *Akamai Functions*. You will make use of language-specific Spin SDKs to address common day-to-day concerns when building edge-native applications.
 
 5. Hands-On-Labs 3: [Edge Accelerated Generative AI](./hol3-edge-accelerated-genai/) is the final exercise illustrating how you can build smarter applications for the edge by adding generative AI to the mix.
 
@@ -48,14 +48,14 @@ Hands-On-Labs 3 (GenAI at the Edge) requires a Linode (with dedicated GPU) being
 
 > The Cloud infrastructure setup instructions could be found in the [`infra`](./infra/) folder.
 
-## Cleaning up your Serverless Wasm Functions Account
+## Cleaning up your Akamai Functions Account
 
-As part of this workshop, you will deploy several applications to your individual *Serverless Wasm Functions* account. To retrieve a list of applications deployed to your account, can always use the `spin aka apps list` command.
+As part of this workshop, you will deploy several applications to your individual *Akamai Functions* account. To retrieve a list of applications deployed to your account, can always use the `spin aka apps list` command.
 
 To delete applications deployed to your account, run the following commands:
 
 ```bash
-spin aka apps delete --app-name hello-serverless-functions --no-confirm
+spin aka apps delete --app-name hello-akamai-functions --no-confirm
 spin aka apps delete --app-name edge-native-use-cases --no-confirm
 spin aka apps delete --app-name edge-accelerated-genai --no-confirm
 ```

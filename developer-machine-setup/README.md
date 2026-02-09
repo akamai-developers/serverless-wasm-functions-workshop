@@ -47,7 +47,7 @@ That's what we call the **Spin Workflow**:
 - `spin new`: For creating new applications from templates
 - `spin build`: For compiling your source down to WebAssembly
 - `spin up`: For running your application straight on your machine
-- `spin aka deploy`: For deploying your application to Serverless Wasm Functions
+- `spin aka deploy`: For deploying your application to Akamai Functions
 
 Spin has more to offer, you can create and distribute your own templates, write plugins for extending its capabilities or seamlessly integrating it into your existing suite of tools.
 
@@ -113,7 +113,7 @@ If you want to use WSL2 (Windows Subsystem for Linux 2), please follow the [inst
 
 ## Installing the `aka` plugin for Spin CLI
 
-As part of this workshop, you'll deploy several Spin applications to *Serverless Wasm Functions*. As a developer, you'll mainly interact with *Serverless Wasm Functions* through the CLI interface provided by the `aka` plugin for Spin CLI.
+As part of this workshop, you'll deploy several Spin applications to *Akamai Functions*. As a developer, you'll mainly interact with *Akamai Functions* through the CLI interface provided by the `aka` plugin for Spin CLI.
 
 You can find and install the `aka` plugin (along many other useful plugins for Spin CLI) using the sub-commands of `spin plugins`. 
 

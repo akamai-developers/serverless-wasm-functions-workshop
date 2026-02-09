@@ -32,7 +32,7 @@ Spin applications have full access to the incoming HTTP request, allowing you to
 
 ### Test and Deploy the Spin application
 
-You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
+You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Akamai Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
 
 > **Hint:** Explore the implementation and the application manifest of the *starting point*, you'll find inline comments providing additional context and link to the Spin documentation for further explanation.
 
@@ -44,22 +44,22 @@ Variables are defined on the scope of the application in the Spin Manifest (`spi
 
 To access a variable from source code, you can use the APIs provided by the language-specific Spin SDKs. Consult the ["Application Variables" section of the Spin documentation](https://spinframework.dev/v3/variables) and learn more about how to use them.
 
-Application variables could be specified using the `--variable` flag when running your application locally with `spin up` or when deploying to *Serverless Wasm Functions* using `spin aka deploy`.
+Application variables could be specified using the `--variable` flag when running your application locally with `spin up` or when deploying to *Akamai Functions* using `spin aka deploy`.
 
 > **Hint:** Explore the implementation and the application manifest of the *starting point*, you'll find inline comments providing additional context and link to the Spin documentation for further explanation.
 
 ### Test and Deploy the Spin application
 
-You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
+You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Akamai Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
 
 ## Task 3: Persisting Data
 
-*Serverless Wasm Functions* provides access to a fully-managed key value store, allowing you to persist data across multiple function invocations. The fully-managed key value store is globally distributed and isolated per application.
+*Akamai Functions* provides access to a fully-managed key value store, allowing you to persist data across multiple function invocations. The fully-managed key value store is globally distributed and isolated per application.
 
-To interact with the *Serverless Wasm Functions* key value store, you have to:
+To interact with the *Akamai Functions* key value store, you have to:
 
 - Specify which components require access to the key value store in the application manifest (`spin.toml`)
-  - *Serverless Wasm Functions* currently supports only the `default` key value store
+  - *Akamai Functions* currently supports only the `default` key value store
 - Use the language-specific Spin SDK for interacting with the key value store
 
 The *starting point* contains a function that handles incoming `GET` requests at `/api/ping`. Extend the handler to count its invocations using the key value store.
@@ -68,7 +68,7 @@ The *starting point* contains a function that handles incoming `GET` requests at
 
 ### Test and Deploy the Spin application
 
-You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
+You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Akamai Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
 
 ## Task 4: Building multi-component Spin applications
 
@@ -83,4 +83,4 @@ Extend the Spin application by adding a new component responsible for serving st
 
 ### Test and Deploy the Spin application
 
-You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Serverless Wasm Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
+You can test your Spin application at any time (assuming that your code is syntactically correct and compiles) using the `spin up` command. Deploying your Spin application to *Akamai Functions* is just one `spin aka deploy` away. Redeploying a Spin application will replace the old version. The subdomain generated for your Spin application will not be affected by recurring deployments.
