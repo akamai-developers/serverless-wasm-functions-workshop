@@ -7,6 +7,13 @@ This folder contains a [Terraform](https://terraform.io) project that you could 
   - `qwen3` is pulled to the Linode once provisioning is finished
 - Firewall is configured to allow inbound connections via HTTP on port `11343` and SSH on port `22`
 
+## Prerequisites
+
+You must have the following tools installed on your machine to use this Terraform project:
+
+- `terraform` CLI (`v1.5.7` or newer)
+- `curl`
+
 ## Configuring the `linode` provider
 
 You must provide an access token for Linode. Create a new access token with `read/write` permissions for:
