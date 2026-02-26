@@ -19,7 +19,7 @@ The wizard asks for fundamental metadata like `name`, `description`, `HTTP Path`
 | Metadata Field | Condition | Value to Provide | Description |
 | -------------- | --------- | ---------------- | ----------- |
 | Name | | `hello-akamai-functions` | Name of your Spin application |
-| Description | | `` | just confirm with `RETURN` |
+| Description | | | just confirm with `RETURN` |
 | HTTP Path | | `/...` | just confirm with `RETURN` |
 | HTTP Router | TS/JS only | `hono` | You can also choose `itty` or `none` but our solution is built with `hono` |
 
